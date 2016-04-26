@@ -12,9 +12,15 @@ namespace BlackJackFinalProject
 {
    public partial class BlackJack : Form
    {
+      // Brice is here
       public BlackJack()
       {
          InitializeComponent();
+      }
+
+      private void BlackJack_Load(object sender, EventArgs e)
+      {
+
       }
    }
 }
