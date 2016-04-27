@@ -12,7 +12,7 @@ namespace BlackJackFinalProject
 {
    public partial class BlackJack : Form
    {
-      // Brice is here
+      // we all are in
       public BlackJack()
       {
          InitializeComponent();
