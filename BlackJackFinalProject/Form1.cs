@@ -46,6 +46,7 @@ namespace BlackJackFinalProject
 
          #region TEST CODE - Display Cards in Listbox Control
          Shoe myShoe = new Shoe();
+         myShoe.Shuffle();
          for (int i = 0; i < 312; i++)
          {
             lstTestingCards.Items.Add(myShoe.ShoeCards[i].Face + " of " + myShoe.ShoeCards[i].Suit);

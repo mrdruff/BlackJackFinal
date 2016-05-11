@@ -44,7 +44,24 @@ namespace BlackJackFinalProject
                }
             }
          }
-      } 
+      }
+       public void Shuffle()
+      {
+
+           Card temp; // Variable to temporarely store first cards value
+           Random rand = new Random(); // Creates random object
+           int r; // Variable to store random number
+
+           // Shuffling cards by storing a card in a temporary variable while switching two card values
+           for(int i = 0; i < 312; i++)
+           {
+               r = rand.Next(312);
+               temp = _shoeCards[i];
+               _shoeCards[i] = _shoeCards[r];
+               _shoeCards[r] = temp;
+
+           }
+      }
       #endregion
 
       #region Properties
