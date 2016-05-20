@@ -33,6 +33,7 @@ namespace BlackJackFinalProject
          string[] faces = { "2", "3", "4", "5", "6", "7", "8", "9", "10",
                              "Jack", "Queen", "King", "Ace" };
          int counter = 0;
+         int cardIndexValue = 0;
          for (int d = 0; d < 6; d++)   // loop for 6 decks
          {
             for (int i = 0; i < 4; i++) // loop for suits
@@ -40,10 +41,12 @@ namespace BlackJackFinalProject
                for (int j = 0; j < 13; j++) // loop for faces
                {
                   // creating a new Card object and storing that in the shoeCards array
-                  _shoeCards[counter] = new Card(faces[j], suits[i]);
+                  _shoeCards[counter] = new Card(faces[j], suits[i], cardIndexValue);
                   counter++;
+                  cardIndexValue++;
                }
             }
+            cardIndexValue = 0;
          }
       }
        public void Shuffle()

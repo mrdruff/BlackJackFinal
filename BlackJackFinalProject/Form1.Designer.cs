@@ -28,6 +28,8 @@
       /// </summary>
       private void InitializeComponent()
       {
+         this.components = new System.ComponentModel.Container();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BlackJack));
          this.lstTestingCards = new System.Windows.Forms.ListBox();
          this.lblIntructBet = new System.Windows.Forms.Label();
          this.lblBetAmount = new System.Windows.Forms.Label();
@@ -64,6 +66,7 @@
          this.picD3 = new System.Windows.Forms.PictureBox();
          this.picD2 = new System.Windows.Forms.PictureBox();
          this.picD1 = new System.Windows.Forms.PictureBox();
+         this.lstCardPics = new System.Windows.Forms.ImageList(this.components);
          ((System.ComponentModel.ISupportInitialize)(this.picP1)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.picP2)).BeginInit();
          ((System.ComponentModel.ISupportInitialize)(this.picP3)).BeginInit();
@@ -131,6 +134,7 @@
          this.btnHit.TabIndex = 4;
          this.btnHit.Text = "Hit";
          this.btnHit.UseVisualStyleBackColor = true;
+         this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
          // 
          // btnStand
          // 
@@ -386,8 +390,66 @@
          this.picD1.Location = new System.Drawing.Point(21, 349);
          this.picD1.Name = "picD1";
          this.picD1.Size = new System.Drawing.Size(100, 133);
+         this.picD1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.picD1.TabIndex = 25;
          this.picD1.TabStop = false;
+         // 
+         // lstCardPics
+         // 
+         this.lstCardPics.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("lstCardPics.ImageStream")));
+         this.lstCardPics.TransparentColor = System.Drawing.Color.Transparent;
+         this.lstCardPics.Images.SetKeyName(0, "2_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(1, "3_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(2, "4_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(3, "5_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(4, "6_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(5, "7_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(6, "8_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(7, "9_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(8, "10_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(9, "jack_of_hearts2.png");
+         this.lstCardPics.Images.SetKeyName(10, "queen_of_hearts2.png");
+         this.lstCardPics.Images.SetKeyName(11, "king_of_hearts2.png");
+         this.lstCardPics.Images.SetKeyName(12, "ace_of_hearts.png");
+         this.lstCardPics.Images.SetKeyName(13, "2_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(14, "3_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(15, "4_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(16, "5_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(17, "6_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(18, "7_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(19, "8_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(20, "9_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(21, "10_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(22, "jack_of_clubs2.png");
+         this.lstCardPics.Images.SetKeyName(23, "queen_of_clubs2.png");
+         this.lstCardPics.Images.SetKeyName(24, "king_of_clubs2.png");
+         this.lstCardPics.Images.SetKeyName(25, "ace_of_clubs.png");
+         this.lstCardPics.Images.SetKeyName(26, "2_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(27, "3_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(28, "4_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(29, "5_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(30, "6_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(31, "7_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(32, "8_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(33, "9_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(34, "10_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(35, "jack_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(36, "queen_of_spades2.png");
+         this.lstCardPics.Images.SetKeyName(37, "king_of_spades2.png");
+         this.lstCardPics.Images.SetKeyName(38, "ace_of_spades.png");
+         this.lstCardPics.Images.SetKeyName(39, "2_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(40, "3_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(41, "4_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(42, "5_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(43, "6_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(44, "7_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(45, "8_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(46, "9_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(47, "10_of_diamonds.png");
+         this.lstCardPics.Images.SetKeyName(48, "jack_of_diamonds2.png");
+         this.lstCardPics.Images.SetKeyName(49, "queen_of_diamonds2.png");
+         this.lstCardPics.Images.SetKeyName(50, "king_of_diamonds2.png");
+         this.lstCardPics.Images.SetKeyName(51, "ace_of_diamonds.png");
          // 
          // BlackJack
          // 
@@ -499,6 +561,7 @@
       private System.Windows.Forms.PictureBox picD3;
       private System.Windows.Forms.PictureBox picD2;
       private System.Windows.Forms.PictureBox picD1;
+      private System.Windows.Forms.ImageList lstCardPics;
    }
 }
 

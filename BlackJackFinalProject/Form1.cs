@@ -18,6 +18,8 @@ namespace BlackJackFinalProject
       Shoe myShoe = new Shoe();
       int betTotal = 0;
       int shoeCounter = 0;
+      List<PictureBox> playerBoxes = new List<PictureBox>();
+      int playerPictureBoxCounter = 0;
       
       // we all are in
       public BlackJack()
@@ -69,6 +71,18 @@ namespace BlackJackFinalProject
 
          Update();
          DealCards();
+
+         playerBoxes.Add(picP1);
+         playerBoxes.Add(picP2);
+         playerBoxes.Add(picP3);
+         playerBoxes.Add(picP4);
+         playerBoxes.Add(picP5);
+         playerBoxes.Add(picP6);
+         playerBoxes.Add(picP7);
+         playerBoxes.Add(picP8);
+         playerBoxes.Add(picP9);
+         playerBoxes.Add(picP10);
+         playerBoxes.Add(picP11);
       }
 
 
@@ -81,8 +95,10 @@ namespace BlackJackFinalProject
       public void DealCards()
       {
          myDealer.Hit(myShoe.ShoeCards[shoeCounter]);
+         picD1.Image = lstCardPics.Images[myShoe.ShoeCards[shoeCounter].CardValue];
          shoeCounter++;
          myDealer.Hit(myShoe.ShoeCards[shoeCounter]);
+         picD2.Image = lstCardPics.Images[myShoe.ShoeCards[shoeCounter].CardValue];
          shoeCounter++;
 
       }
@@ -97,6 +113,14 @@ namespace BlackJackFinalProject
       private void btnClose_Click(object sender, EventArgs e)
       {
          Application.Exit();
+      }
+
+      private void btnHit_Click(object sender, EventArgs e)
+      {
+         me.Hit(myShoe.ShoeCards[shoeCounter]);
+         playerBoxes[playerPictureBoxCounter].Image = lstCardPics.Images[myShoe.ShoeCards[shoeCounter].CardValue];
+         shoeCounter++;
+         playerPictureBoxCounter++;
       }
 
    }

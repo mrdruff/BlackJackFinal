@@ -14,10 +14,11 @@ namespace BlackJackFinalProject
       private int _cardValue;
 
       // Constructor
-      public Card(string fLoc, string bLoc)
+      public Card(string fLoc, string bLoc, int i)
       {
          _face = fLoc;
          _back = bLoc;
+         _cardValue = i;
       }
 
       #region Properties
@@ -37,6 +38,11 @@ namespace BlackJackFinalProject
             return _back;
          }
       } 
+
+      public int CardValue
+      {
+         get { return _cardValue; }
+      }
       #endregion
    }
 }
