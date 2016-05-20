@@ -17,12 +17,13 @@ namespace BlackJackFinalProject
       public override string Hit(Card selectedCard)
       {
          this.AddCard(selectedCard);
-         throw new NotImplementedException();
+         return "";
+//         throw new NotImplementedException();
       }
 
       public override void Stand()
       {
-         throw new NotImplementedException();
+//         throw new NotImplementedException();
       }
    }
 }
