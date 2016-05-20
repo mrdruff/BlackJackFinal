@@ -12,6 +12,13 @@ namespace BlackJackFinalProject
 {
    public partial class BlackJack : Form
    {
+      
+      Player me = new Player();
+      Dealer myDealer = new Dealer();
+      Shoe myShoe = new Shoe();
+      int betTotal = 0;
+      int shoeCounter = 0;
+      
       // we all are in
       public BlackJack()
       {
@@ -45,8 +52,7 @@ namespace BlackJackFinalProject
          #endregion
 
          #region TEST CODE - Display Cards in Listbox Control
-         Shoe myShoe = new Shoe();
-         myShoe.Shuffle();
+         
          for (int i = 0; i < 312; i++)
          {
             lstTestingCards.Items.Add(myShoe.ShoeCards[i].Face + " of " + myShoe.ShoeCards[i].Suit);
@@ -60,6 +66,38 @@ namespace BlackJackFinalProject
          //} 
          #endregion 
          #endregion
+
+         Update();
+         DealCards();
       }
+
+
+      public void Update()
+      {
+         lblBankAmount.Text = me.Bank.ToString();
+         lblBetAmount.Text = betTotal.ToString();
+      }
+
+      public void DealCards()
+      {
+         myDealer.Hit(myShoe.ShoeCards[shoeCounter]);
+         shoeCounter++;
+         myDealer.Hit(myShoe.ShoeCards[shoeCounter]);
+         shoeCounter++;
+
+      }
+
+      private void btnFive_Click(object sender, EventArgs e)
+      {
+         me.Bet(5);
+         betTotal += 5;
+         Update();
+      }
+
+      private void btnClose_Click(object sender, EventArgs e)
+      {
+         Application.Exit();
+      }
+
    }
 }
