@@ -16,6 +16,7 @@ namespace BlackJackFinalProject
          #region ShoeSolution
 
          CreateShoe();
+         this.Shuffle();
 
          #endregion
       }
